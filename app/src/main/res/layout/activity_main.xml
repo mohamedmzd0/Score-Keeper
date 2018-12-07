@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_teamA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset"
+        app:layout_constraintEnd_toStartOf="@id/layout_teamB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TEAM A"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/tv_score_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/btn_plus_one_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+1" />
+
+        <Button
+            android:id="@+id/btn_plus_two_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+2" />
+
+        <Button
+            android:id="@+id/btn_plus_three_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+3" />
+
+        <Button
+            android:id="@+id/btn_plus_six_teamA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+6" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/btn_reset"
+        app:layout_constraintEnd_toStartOf="@id/layout_teamB"
+        app:layout_constraintStart_toEndOf="@id/layout_teamA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_teamB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/layout_teamA"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TEAM B"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/tv_score_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/btn_plus_one_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+1" />
+
+        <Button
+            android:id="@+id/btn_plus_two_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+2" />
+
+        <Button
+            android:id="@+id/btn_plus_three_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+3" />
+
+        <Button
+            android:id="@+id/btn_plus_six_teamB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+6" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_teamA" />
+</android.support.constraint.ConstraintLayout>
